@@ -1,6 +1,6 @@
 <h1>Habits</h1>
 <ul>
     {% for habit in habits %}
-        <li>{{ habit.title }}</li>
+        <li><a href="{% url 'habits:habit_detail' habit.id %}">{{ habit.title }}</a> [{{ habit.owner }}] - {{ habit.id }}</li>
     {% endfor %}
 </ul>
